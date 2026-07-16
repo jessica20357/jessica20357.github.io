@@ -12,7 +12,8 @@ type Route =
 type CardCategory = 'paintings' | 'readings' | 'plants' | 'animatics' | 'guitar';
 type SoundName = 'door' | 'typing' | 'guitar' | 'drawer' | 'page';
 
-const asset = (path: string) => new URL(path, import.meta.url).href;
+const ASSET_VERSION = '20260716-redraw';
+const asset = (path: string) => `${new URL(path, import.meta.url).href}?v=${ASSET_VERSION}`;
 
 const A = {
   background: asset('../resources/pictures/paintings/background.png'),
